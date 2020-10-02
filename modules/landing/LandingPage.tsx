@@ -11,12 +11,8 @@ const FullscreenImage = styled.img`
   height: 100%;
   object-fit: cover;
   transition: opacity 0.5s;
-`;
-
-const Blur = styled.div`
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(10px);
+  filter: blur(10px);
+  transform: scale(1.1);
 `;
 
 const Pretitle = styled.h2`
@@ -72,9 +68,6 @@ const LandingPage = () => {
             style={{ opacity: backgroundOpacity }}
             onLoad={() => setBackgroundOpacity(1)}
           />
-        </StackLayer>
-        <StackLayer>
-          <Blur />
         </StackLayer>
         <StackLayer>
           <Container
