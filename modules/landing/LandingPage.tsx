@@ -59,6 +59,29 @@ const LandingPage = () => {
     <>
       <Head>
         <title>Hizkia Felix</title>
+        <meta property="og:title" content="Hizkia Felix" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hizkifw.me" />
+        <meta
+          property="og:image"
+          content="https://hizkifw.me/static/images/banner.png"
+        />
+        <meta
+          property="og:description"
+          content="Just another personal landing page."
+        />
+        <meta name="theme-color" content="#000000" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://hizkifw.me" />
+        <meta name="twitter:title" content="Hizkia Felix" />
+        <meta
+          property="twitter:description"
+          content="Just another personal landing page."
+        />
+        <meta
+          name="twitter:image"
+          content="https://hizkifw.me/static/images/banner.png"
+        />
       </Head>
       <FullscreenStacker>
         <StackLayer style={{ backgroundColor: "#000" }}>
