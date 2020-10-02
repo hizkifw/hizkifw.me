@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Container from "./components/Container";
 import FullscreenStacker from "./components/FullscreenStacker";
+import IconLink from "./components/IconLink";
 import StackLayer from "./components/StackLayer";
 
 const FullscreenImage = styled.img`
@@ -47,8 +48,13 @@ const Tagline = styled.p`
 const LandingPage = () => {
   const backgroundImageRef = React.useRef<HTMLImageElement>(null);
   const [backgroundOpacity, setBackgroundOpacity] = React.useState(0);
+  const [emailAddress, setEmailAddress] = React.useState("");
 
   React.useEffect(() => {
+    // Obfuscate email address to prevent scraping
+    setEmailAddress(
+      Buffer.from("bWFpbHRvOmNvbnRhY3RAaGl6a2lmdy5tZQ==", "base64").toString()
+    );
     if (backgroundImageRef.current?.complete) setBackgroundOpacity(1);
   }, []);
 
@@ -79,6 +85,23 @@ const LandingPage = () => {
             <Pretitle>Hello. I'm</Pretitle>
             <Title>Hizkia Felix.</Title>
             <Tagline>I do software and web development.</Tagline>
+            <div style={{ marginTop: "1rem" }}>
+              <IconLink
+                src="/static/icons/github.svg"
+                alt="GitHub"
+                href="https://github.com/HizkiFW"
+              />
+              <IconLink
+                src="/static/icons/linkedin.svg"
+                alt="LinkedIn"
+                href="https://www.linkedin.com/in/hizkifw/"
+              />
+              <IconLink
+                src="/static/icons/envelope.svg"
+                alt="Email"
+                href={emailAddress}
+              />
+            </div>
           </div>
         </Container>
       </StackLayer>
