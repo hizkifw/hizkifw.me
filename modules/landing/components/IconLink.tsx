@@ -10,6 +10,12 @@ type IconLinkProps = {
 const IconImage = styled.img`
   width: 2rem;
   height: 2rem;
+
+  transition: opacity 0.2s;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const IconLink = (props: IconLinkProps) => {
