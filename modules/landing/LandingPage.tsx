@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import styled from "styled-components";
 import Container from "./components/Container";
 import FullscreenStacker from "./components/FullscreenStacker";
@@ -59,53 +60,58 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <FullscreenStacker>
-      <StackLayer style={{ backgroundColor: "#000" }}>
-        <FullscreenImage
-          ref={backgroundImageRef}
-          src="https://i.imgur.com/spPwj07.jpg"
-          style={{ opacity: backgroundOpacity }}
-          onLoad={() => setBackgroundOpacity(1)}
-        />
-      </StackLayer>
-      <StackLayer>
-        <Blur />
-      </StackLayer>
-      <StackLayer>
-        <Container
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-          }}
-        >
-          <div>
-            <Pretitle>Hello. I'm</Pretitle>
-            <Title>Hizkia Felix.</Title>
-            <Tagline>I do software and web development.</Tagline>
-            <div style={{ marginTop: "1rem" }}>
-              <IconLink
-                src="/static/icons/github.svg"
-                alt="GitHub"
-                href="https://github.com/HizkiFW"
-              />
-              <IconLink
-                src="/static/icons/linkedin.svg"
-                alt="LinkedIn"
-                href="https://www.linkedin.com/in/hizkifw/"
-              />
-              <IconLink
-                src="/static/icons/envelope.svg"
-                alt="Email"
-                href={emailAddress}
-              />
+    <>
+      <Head>
+        <title>Hizkia Felix</title>
+      </Head>
+      <FullscreenStacker>
+        <StackLayer style={{ backgroundColor: "#000" }}>
+          <FullscreenImage
+            ref={backgroundImageRef}
+            src="https://i.imgur.com/spPwj07.jpg"
+            style={{ opacity: backgroundOpacity }}
+            onLoad={() => setBackgroundOpacity(1)}
+          />
+        </StackLayer>
+        <StackLayer>
+          <Blur />
+        </StackLayer>
+        <StackLayer>
+          <Container
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              justifyContent: "center",
+            }}
+          >
+            <div>
+              <Pretitle>Hello. I'm</Pretitle>
+              <Title>Hizkia Felix.</Title>
+              <Tagline>I do software and web development.</Tagline>
+              <div style={{ marginTop: "1rem" }}>
+                <IconLink
+                  src="/static/icons/github.svg"
+                  alt="GitHub"
+                  href="https://github.com/HizkiFW"
+                />
+                <IconLink
+                  src="/static/icons/linkedin.svg"
+                  alt="LinkedIn"
+                  href="https://www.linkedin.com/in/hizkifw/"
+                />
+                <IconLink
+                  src="/static/icons/envelope.svg"
+                  alt="Email"
+                  href={emailAddress}
+                />
+              </div>
             </div>
-          </div>
-        </Container>
-      </StackLayer>
-    </FullscreenStacker>
+          </Container>
+        </StackLayer>
+      </FullscreenStacker>
+    </>
   );
 };
 
