@@ -65,10 +65,16 @@ const LandingPage = () => {
           <FullscreenImage
             ref={backgroundImageRef}
             src="https://i.imgur.com/spPwj07.jpg"
-            style={{ opacity: backgroundOpacity }}
             onLoad={() => setBackgroundOpacity(1)}
           />
         </StackLayer>
+        <StackLayer
+          style={{
+            transition: "opacity 0.5s",
+            opacity: 1 - backgroundOpacity,
+            backgroundColor: "#000",
+          }}
+        />
         <StackLayer>
           <Container
             style={{
