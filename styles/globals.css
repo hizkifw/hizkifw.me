@@ -4,3 +4,7 @@ html,
 body {
   font-size: 18px;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

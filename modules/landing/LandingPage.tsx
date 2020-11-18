@@ -1,50 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import styled from "styled-components";
-import Container from "./components/Container";
-import FullscreenStacker from "./components/FullscreenStacker";
 import IconLink from "./components/IconLink";
-import StackLayer from "./components/StackLayer";
-
-const FullscreenImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.5s;
-  filter: blur(10px);
-  transform: scale(1.1);
-`;
-
-const Pretitle = styled.h2`
-  font-family: "Montserrat", sans-serif;
-  margin-left: -0.1em;
-  font-weight: 400;
-  color: #fff;
-  font-size: 2rem;
-  opacity: 0.75;
-`;
-
-const Title = styled.h1`
-  font-family: "Montserrat", sans-serif;
-  margin-left: -0.1em;
-  font-weight: 700;
-  color: #fff;
-  font-size: 4rem;
-`;
-
-const Tagline = styled.p`
-  font-family: "Lato", sans-serif;
-  margin-left: -0.1em;
-  font-weight: 400;
-  color: #fff;
-  font-size: 1.2rem;
-  opacity: 0.75;
-  margin-top: 1rem;
-`;
 
 const LandingPage = () => {
   const backgroundImageRef = React.useRef<HTMLImageElement>(null);
-  const [backgroundOpacity, setBackgroundOpacity] = React.useState(0);
+  const [backgroundHidden, setBackgroundHidden] = React.useState(true);
   const [emailAddress, setEmailAddress] = React.useState("");
 
   React.useEffect(() => {
@@ -52,7 +12,7 @@ const LandingPage = () => {
     setEmailAddress(
       Buffer.from("bWFpbHRvOmNvbnRhY3RAaGl6a2lmdy5tZQ==", "base64").toString()
     );
-    if (backgroundImageRef.current?.complete) setBackgroundOpacity(1);
+    setBackgroundHidden(!backgroundImageRef.current?.complete);
   }, []);
 
   return (
@@ -83,36 +43,34 @@ const LandingPage = () => {
           content="https://hizkifw.me/static/images/banner.png"
         />
       </Head>
-      <FullscreenStacker>
-        <StackLayer style={{ backgroundColor: "#000" }}>
-          <FullscreenImage
+      <div className="relative w-screen h-screen">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            className="w-full h-full object-cover transform scale-110 filter-blur-10"
             ref={backgroundImageRef}
             src="https://i.imgur.com/spPwj07.jpg"
-            onLoad={() => setBackgroundOpacity(1)}
+            onLoad={() => setBackgroundHidden(false)}
           />
-        </StackLayer>
-        <StackLayer
-          style={{
-            transition: "opacity 0.5s",
-            opacity: 1 - backgroundOpacity,
-            backgroundColor: "#000",
-          }}
+        </div>
+        <div
+          className={
+            "absolute inset-0 overflow-hidden transition duration-500 bg-black " +
+            (backgroundHidden ? "" : "opacity-0")
+          }
         />
-        <StackLayer>
-          <Container
-            style={{
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              justifyContent: "center",
-            }}
-          >
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="container px-8 max-w-screen-lg mx-auto h-full flex flex-col justify-center items-start">
             <div>
-              <Pretitle>Hello. I'm</Pretitle>
-              <Title>Hizkia Felix.</Title>
-              <Tagline>I do software and web development.</Tagline>
-              <div style={{ marginTop: "1rem" }}>
+              <h2 className="font-heading text-white text-opacity-75 text-3xl -ml-01e">
+                Hello. I'm
+              </h2>
+              <h1 className="font-heading text-white text-6xl font-bold -ml-01e">
+                Hizkia Felix.
+              </h1>
+              <p className="font-sans text-white text-opacity-75 -ml-01e text-xl mt-4">
+                I do software and web development.
+              </p>
+              <div className="flex flex-row mt-4">
                 <IconLink
                   src="/static/icons/github.svg"
                   alt="GitHub"
@@ -130,9 +88,9 @@ const LandingPage = () => {
                 />
               </div>
             </div>
-          </Container>
-        </StackLayer>
-      </FullscreenStacker>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
