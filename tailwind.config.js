@@ -10,8 +10,24 @@ module.exports = {
       "blur-10": "blur(10px)",
     },
     fontFamily: {
-      heading: ["Montserrat", "sans-serif"],
+      heading: ["Inter", "sans-serif"],
       sans: ["Lato", "sans-serif"],
+    },
+    colors: {
+      black: "#000000",
+      white: "#FFFFFF",
+      gray: {
+        50: "#F4F4F5",
+        100: "#EAEAEB",
+        200: "#CACACC",
+        300: "#ABABAD",
+        400: "#6B6B70",
+        500: "#2C2C33",
+        600: "#28282E",
+        700: "#1A1A1F",
+        800: "#141417",
+        900: "#0D0D0F",
+      },
     },
     extend: {
       spacing: {
