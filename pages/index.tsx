@@ -6,7 +6,7 @@ export default function Home() {
       <Head>
         <title>hizkifw's website</title>
       </Head>
-      <div
+      <main
         className={[
           'min-h-screen py-8 lg:py-12',
           'flex flex-col justify-center',
@@ -42,8 +42,8 @@ export default function Home() {
             <h1>Hizkia Felix Winata</h1>
             <p className="lead -mt-8 mb-8">Web Developer</p>
           </header>
-          <main className="flex gap-12 flex-col lg:flex-row-reverse">
-            <article className="prose prose-slate">
+          <article className="flex gap-12 flex-col lg:flex-row-reverse">
+            <section className="prose prose-slate">
               <h2 id="profile">Profile</h2>
               <p>
                 Exploring the world of computers, with a passion in building
@@ -118,11 +118,6 @@ export default function Home() {
                   </span>
                 </li>
                 <li>
-                  Created a project management web app with Next.js and Firebase
-                  auth to help a VTuber translation group manage their video
-                  projects.
-                </li>
-                <li>
                   <a href="https://github.com/hizkifw/fc2-live-dl">
                     fc2-live-dl
                   </a>
@@ -140,9 +135,19 @@ export default function Home() {
                     (github.com/hizkifw/react-srv3)
                   </span>
                 </li>
+                <li>
+                  Created a project management web app with Next.js and Firebase
+                  auth to help a VTuber translation group manage their video
+                  projects.
+                </li>
+                <li>
+                  Set up a live video stream for a one-off event, and served
+                  over 100 concurrent viewers with several geographically
+                  distributed servers.
+                </li>
               </ul>
-            </article>
-            <aside className="prose prose-slate">
+            </section>
+            <section className="prose prose-slate">
               <h2>Contact information</h2>
               <ul>
                 <li>
@@ -167,6 +172,7 @@ export default function Home() {
               </ul>
               <p>Other languages and tools I have experience in:</p>
               <ul>
+                <li>Docker</li>
                 <li>Python</li>
                 <li>Rust</li>
                 <li>Helm</li>
@@ -183,17 +189,15 @@ export default function Home() {
               <ul>
                 <li>
                   <a href="https://www.uow.edu.au">University of Wollongong</a>:
-                  Bachelor of Science in Computer Science
-                  <p>
-                    <time dateTime="2019-10-01">Oct 2019</time> -{' '}
-                    <time dateTime="2022-09-01">Sep 2022</time> (ongoing)
-                  </p>
+                  Bachelor of Science in Computer Science (
+                  <time dateTime="2019-10-01">Oct 2019</time> -{' '}
+                  <time dateTime="2022-09-01">Sep 2022</time>)
                 </li>
               </ul>
-            </aside>
-          </main>
+            </section>
+          </article>
         </div>
-      </div>
+      </main>
     </>
   );
 }
