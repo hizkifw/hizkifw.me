@@ -60,17 +60,21 @@ export default function Home() {
                   <ul>
                     <li>
                       Built Pintu&#39;s landing page and Pintu Academy, using
-                      Next.js and a Wordpress backend
+                      Next.js and a Wordpress backend.
                     </li>
                     <li>
                       Developed internal tools to speed up KYC flow by
                       automatically extracting details from identity cards using
-                      Google&#39;s Cloud Vision OCR
+                      Google&#39;s Cloud Vision OCR.
                     </li>
                     <li>
-                      Implemented the referral feature on the app using React
-                      Native
+                      Implemented the referral UI on the app using React Native.
                     </li>
+                    <li>
+                      Built the DCA calculator backend with NestJS, and
+                      implemented the mobile UI in React Native.
+                    </li>
+                    <li>Helped implement dark mode for the Pintu app.</li>
                   </ul>
                 </li>
                 <li>
@@ -79,7 +83,7 @@ export default function Home() {
                   <ul>
                     <li>
                       Developed Rupiah Token&#39;s website from scratch with
-                      React and styled-components
+                      React and styled-components.
                     </li>
                     <li>
                       Built a multisig BEP2 wallet (before native multisig was
@@ -88,7 +92,7 @@ export default function Home() {
                     </li>
                     <li>
                       Generated a vanity transaction for IDRTB&#39;s deployment
-                      on the Binance chain
+                      on the Binance chain.
                     </li>
                   </ul>
                 </li>
@@ -122,7 +126,8 @@ export default function Home() {
                     fc2-live-dl
                   </a>
                   : Reverse engineered FC2&#39;s streaming service to build a
-                  tool that records live streams in original quality.
+                  tool that records live streams in original quality, using
+                  Python, asyncio, and ffmpeg.
                   <span className="hidden print:block">
                     (github.com/hizkifw/fc2-live-dl)
                   </span>
@@ -176,6 +181,7 @@ export default function Home() {
                 <li>Python</li>
                 <li>Rust</li>
                 <li>Helm</li>
+                <li>ELK stack</li>
               </ul>
               <p>Other notable skills:</p>
               <ul>
