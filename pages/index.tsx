@@ -155,14 +155,17 @@ export default function Home() {
             <section className="prose prose-slate">
               <h2>Contact information</h2>
               <ul>
+                <li>Singapore</li>
+                <li>
+                  <a href="mailto:felix@hizkifw.me">felix@hizkifw.me</a>
+                </li>
                 <li>
                   <a href="https://github.com/hizkifw">github.com/hizkifw</a>
                 </li>
                 <li>
-                  <a href="https://hizkifw.me">hizkifw.me</a>
-                </li>
-                <li>
-                  <a href="mailto:felix@hizkifw.me">felix@hizkifw.me</a>
+                  <a href="https://linkedin.com/in/hizkifw">
+                    linkedin.com/in/hizkifw
+                  </a>
                 </li>
               </ul>
 
