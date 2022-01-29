@@ -52,6 +52,7 @@ export default function Home() {
                 developing and deploying scalable backend systems. I can quickly
                 learn anything by getting hands-on with new tech.
               </p>
+
               <h2 id="experience">Experience</h2>
               <ul>
                 <li>
@@ -97,6 +98,16 @@ export default function Home() {
                   </ul>
                 </li>
               </ul>
+
+              <h2 id="awards">Honors and awards</h2>
+              <ul>
+                <li>
+                  Challenge Statement Winner for Solar PV electricity
+                  distribution equalisation, PT United Tractors Tbk. for
+                  Hack.Asia 2022.
+                </li>
+              </ul>
+
               <h2 id="personal-projects">Personal projects</h2>
               <ul>
                 <li>
