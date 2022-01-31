@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -164,6 +165,13 @@ export default function Home() {
               </ul>
             </section>
             <section className="prose prose-slate">
+              <Image
+                width="256"
+                height="256"
+                src="/static/images/profile.jpeg"
+                alt="Profile picture"
+                className="rounded-lg object-cover"
+              />
               <h2>Contact information</h2>
               <ul>
                 <li>Singapore</li>
