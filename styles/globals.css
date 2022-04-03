@@ -8,3 +8,9 @@
   size: A4;
   margin: 0;
 }
+
+@media print {
+  body {
+    zoom: 0.65;
+  }
+}
