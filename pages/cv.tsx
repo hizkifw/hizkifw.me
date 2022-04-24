@@ -168,7 +168,7 @@ export default function CVPage() {
               <Image
                 width="256"
                 height="256"
-                src="/static/images/transparent3-crop.png"
+                src="/static/images/profile-square.jpg"
                 alt="Profile picture"
                 className="rounded-lg object-cover"
               />
